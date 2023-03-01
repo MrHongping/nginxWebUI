@@ -1,8 +1,6 @@
 name: Maven Package
 
-on:
-  push:
-    types: [master]
+on: [push]
 
 jobs:
   build:
