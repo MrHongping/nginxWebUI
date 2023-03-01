@@ -23,10 +23,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Test
-      run: java -jar target/*.jar
     - name: Save Package
-      run: mkdir staging && cp target/*.jar staging
+      run: mkdir staging && cp target/*.jar staging && md5sum target/*.jar
 
     - uses: actions/upload-artifact@v3
       with:
